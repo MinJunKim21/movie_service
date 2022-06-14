@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import Movie from './components/Movie';
+import Movie from '../components/Movie';
 
 
 const Home = () => {
@@ -23,7 +23,8 @@ const Home = () => {
       <div>
         {movies.map((movie) => (
           <Movie
-            key={movie.id} 
+            key={movie.id}
+            id={movie.id} 
             coverImage={movie.medium_cover_image} 
             title={movie.title} 
             summary={movie.summary}
@@ -31,7 +32,6 @@ const Home = () => {
           />
         ))}
       </div>}
-  );
     </div>
   )
 }

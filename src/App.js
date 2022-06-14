@@ -1,9 +1,17 @@
-import { useState, useEffect } from "react";
-import Movie from './components/Movie';
+import { BrowserRouter as Router, Routes, Route, NavLink, BrowserRouter } from 'react-router-dom'
+
+import Detail from './routes/Detail';
+import Home from './routes/Home';
 
 function App() {
-  return null
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<Detail />} />
+      </Routes>
+    </BrowserRouter>
+  );    
 }
 
 export default App;
- 
